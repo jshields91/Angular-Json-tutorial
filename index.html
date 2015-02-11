@@ -31,7 +31,7 @@
 </tr>
 </thead>
 <tbody>
-<tr ng-repeat="item in items">
+<tr ng-repeat="item in names">
 <td><img ng-src="{{ item.image }}" /></td>
 <td>{{ item.title }}</td>
 <td>{{ item.author }}</td>
@@ -43,7 +43,7 @@
   <script>
 	  function ListController($scope, $http) {
 	    $http.get("https://jshields91.github.io/Angular-Json-tutorial/tutorials.json")
-	    .success(function(response) {$scope.items = response;});
+	    .success(function(response) {$scope.names = response;});
 	  }
   </script>
 
