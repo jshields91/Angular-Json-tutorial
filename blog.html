@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>How to AngularJS</title>
+</head>
+
+<body>
+			<nav class="navbar navbar-default">
+                <ul class="nav navbar-nav">
+                    <li class="navbar-btn"><a href="/Angular-Json-tutorial">Home</a></li>
+                    <li class="navbar-btn open"><a href="/Angular-Json-tutorial/blog.html">Blog</a></li>
+                </ul>
+            </nav>
+
+<div class="container">
+<h1>How to AngularJS</h1>
+<h3>Notes:</h3>
+<p>This tutorial assumes you have a working knowledge of HTML, CSS, JS, JQuery, Json, Bootstrap, and AngularJS.</p>
+<h3>Part 1 -- Using Angular to extract Json data</h3>
+<div class="row">
+<div class="step col-xs-12 col-md-6">
+<h3>Step 1</h3>
+<p>Set up your ng-app. </p><p>For example:</p>
+<p>var app = angular.module('listJson', []);</p>
+</div>
+<div class="step col-xs-12 col-md-6">
+<h3>Step 2</h3>
+<p>Set up your controller to use the  $scope and $http services. </p><p>For example:</p>
+<p>app.controller('ListController', ['$scope','$http', function($scope,$http)</p>
+</div>
+<div class="step col-xs-12 col-md-6">
+<h3>Step 3</h3>
+<p>Initialize $scope = this and initialize an array as part of $scope to hold your Json. </p><p>For example: </p>
+<p>var $scope = this;<br/>
+   $scope.items = [];
+</p>
+</div>
+<div class="step col-xs-12 col-md-6">
+<h3>Step 4</h3>
+<p>Use the $http get service to extract your Json and, on success, assign the data to your array. </p><p>For example: </p>
+<p>$http.get('tutorials.json').success(function(data){<br/>
+   $scope.items = data;
+</p>
+</div>
+<div class="step col-xs-12 col-md-6">
+<h3>Step 5</h3>
+<p>Now that your angularJS is ready, add it to your html page with the ng attributes. Be sure to include ng-app and ng-controller. To iterate through your Json objects, use ng-repeat.</p>
+</div>
+<div class="step col-xs-12 col-md-6">
+<h3>Ending notes</h3>
+<p>Be sure to include all necessary script and link references. Be sure to use ng-src for images and ng-href for links obtained through Angular. Style to desire.</p>
+</div>
+</div>
+</div>
+</body>
+
+</html>

@@ -7,6 +7,6 @@
     $http.get('tutorials.json').success(function(data){
     $scope.items = data;
     });
-    
+    $scope.order = 'title';
   }]);
 })();

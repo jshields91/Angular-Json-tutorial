@@ -3,14 +3,13 @@
 }
 .navbar {
 	background-color:#99CCFF;
-	border:thin black solid;
+	border:thin black solid !important;
+	}
+.open * {
+	
+	background-color:#99FF66 !important;
+	border:thin black solid !important;
 }
-
-nav .open {
-	color:#99FF66; 
-	background-color:#000;
-}
-
 .item {
 	padding: 5px;
 	background-color:#99FF66;
@@ -32,3 +31,8 @@ nav .open {
 	 color:#800000;
 }
 
+.step {
+	border:thin black solid;
+	background-color:#99FF66;
+	height:200px;
+}
