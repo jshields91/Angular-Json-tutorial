@@ -42,7 +42,7 @@
 
   <script>
 	  function ListController($scope, $http) {
-	    $http.get("/tutorials.json")
+	    $http.get("https://jshields91.github.io/Angular-Json-tutorial/tutorials.json")
 	    .success(function(response) {$scope.items = response;});
 	  }
   </script>
