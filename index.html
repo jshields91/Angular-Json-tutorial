@@ -19,8 +19,8 @@
 	
 </head>
 
-<body ng-app="" ng-controller="ListController">
-
+<body>
+<div ng-app="" ng-controller="listController">
 <table id="itemTbl">
 <thead>
 <tr>
@@ -39,9 +39,9 @@
 </tr>
 </tbody>
 </table>
-
+</div>
   <script>
-	  function ListController($scope, $http) {
+	  function listController($scope, $http) {
 	    $http.get("https://jshields91.github.io/Angular-Json-tutorial/tutorials.json")
 	    .success(function(response) {$scope.names = response;});
 	  }
