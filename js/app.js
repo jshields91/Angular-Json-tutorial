@@ -1,11 +1,11 @@
 (function() {
   var app = angular.module('listJson', []);
 
-  app.controller('ListController', ['$http', function($http){
-    var list = this;
-    list.items = [];
-    $http.get("https://jshields91.github.io/Angular-Json-tutorial/tutorials.json").success(function(data){
-    list.items = data;
+  app.controller('ListController', ['$scope','$http', function($scope,$http){
+    var $scope = this;
+    $scope.items = [];
+    $http.get('tutorials.json').success(function(data){
+    $scope.items = data;
     });
     
   }]);
