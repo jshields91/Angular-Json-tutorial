@@ -4,7 +4,7 @@
   app.controller('ListController', ['$http', function($http){
     var list = this;
     list.items = [];
-    $http.get("/tutorials.json").success(function(data){
+    $http.get("https://jshields91.github.io/Angular-Json-tutorial/tutorials.json").success(function(data){
     list.items = data;
     });
     
